@@ -16,5 +16,15 @@ function M.highlight_vue_blocks()
   ]])
 end
 
-return M
+local function setup()
+  local augroup = vim.api.nvim_create_augroup("VueHighlighting", { clear = true })
+  vim.api.nvim_create_autocmd("VimEnter", {
+    group = augroup,
+    desc = "Highlight Vue blocks on load",
+    once = true,
+    callback = M.highlight_vue_blocks
+  })
+end
+
+return { setup = setup }
 
