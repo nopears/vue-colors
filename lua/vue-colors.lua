@@ -1,11 +1,10 @@
 local M = {}
 
 function M.highlight_vue_blocks()
-	print("Highlighting Vue blocks")
 	vim.cmd([[
-    syntax match VueScript /\<script\>/ containedin=ALL
-    syntax match VueTemplate /\<template\>/ containedin=ALL
-    syntax match VueStyle /\<style\>/ containedin=ALL
+    syntax region VueScript start=/<script>/ end=/<\/script>/ contains=ALL
+    syntax region VueTemplate start=/<template>/ end=/<\/template>/ contains=ALL
+    syntax region VueStyle start=/<style>/ end=/<\/style>/ contains=ALL
 
     highlight VueScript guibg=#FFDDDD
     highlight VueTemplate guibg=#DDFFDD
