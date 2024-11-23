@@ -1,7 +1,6 @@
 local M = {}
 
 function M.highlight_vue_blocks()
-  print("Running highlight_vue_blocks")
   vim.cmd([[
     syntax region VueScript start=+<script[^>]*>+ end=+</script>+ contains=ALL
     syntax region VueTemplate start=+<template[^>]*>+ end=+</template>+ contains=ALL
@@ -11,7 +10,6 @@ function M.highlight_vue_blocks()
     highlight default link VueTemplate Normal
     highlight default link VueStyle Normal
 
-    " Dark green, dark red, and dark green
     highlight VueScript guibg=#005f5f
     highlight VueTemplate guibg=#5f0000
     highlight VueStyle guibg=#005f00
