@@ -10,9 +10,9 @@ function M.highlight_vue_blocks()
     highlight default link VueTemplate Normal
     highlight default link VueStyle Normal
 
-		highlight VueScript guibg=#fb493480 
-		highlight VueTemplate guibg=#83a59880 
-		highlight VueStyle guibg=#b8bb2680
+    highlight VueScript guibg=#005f5f
+    highlight VueTemplate guibg=#5f0000
+    highlight VueStyle guibg=#005f00
   ]])
 end
 
