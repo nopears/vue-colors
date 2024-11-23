@@ -18,10 +18,10 @@ end
 
 local function setup()
   local augroup = vim.api.nvim_create_augroup("VueHighlighting", { clear = true })
-  vim.api.nvim_create_autocmd("VimEnter", {
+  vim.api.nvim_create_autocmd("BufReadPost,BufNewFile", {
     group = augroup,
-    desc = "Highlight Vue blocks on load",
-    once = true,
+    pattern = "*.vue",
+    desc = "Highlight Vue blocks on opening a Vue file",
     callback = M.highlight_vue_blocks
   })
 end
