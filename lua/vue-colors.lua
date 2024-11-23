@@ -10,20 +10,10 @@ function M.highlight_vue_blocks()
     highlight default link VueTemplate Normal
     highlight default link VueStyle Normal
 
-    highlight VueScript guibg=#FFDDDD
-    highlight VueTemplate guibg=#DDFFDD
-    highlight VueStyle guibg=#DDDDFF
+		highlight VueScript guibg=#fb493480 
+		highlight VueTemplate guibg=#83a59880 
+		highlight VueStyle guibg=#b8bb2680
   ]])
 end
-
--- Autocommand setup directly in Lua
-vim.api.nvim_create_augroup("VueHighlight", { clear = true })
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "vue",
-	callback = function()
-		M.highlight_vue_blocks()
-	end,
-	group = "VueHighlight",
-})
 
 return M
