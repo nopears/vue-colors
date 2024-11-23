@@ -6,9 +6,10 @@ function M.highlight_vue_blocks()
     syntax region VueTemplate start=+<template[^>]*>+ end=+</template>+ contains=ALL
     syntax region VueStyle start=+<style[^>]*>+ end=+</style>+ contains=ALL
 
-    highlight VueScript guibg=#FFDDDD
-    highlight VueTemplate guibg=#DDFFDD
-    highlight VueStyle guibg=#DDDDFF
+    highlight VueScript guibg=#005f5f
+    highlight VueTemplate guibg=#5f0000
+    highlight VueStyle guibg=#005f00
+
   ]])
 end
 
